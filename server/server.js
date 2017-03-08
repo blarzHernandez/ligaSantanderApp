@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/src'));
 
 app.get('/',function(req, res){
-      res.end("Getting all position");
+      res.json({"Getting all position":"ok"});
 
 });
 
