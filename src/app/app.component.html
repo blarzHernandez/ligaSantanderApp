@@ -1,3 +1,11 @@
 <h1>
   {{title}}
 </h1>
+<table>
+  <th>#</th><th>Nombre</th><th>Puntos</th>
+  <tr *ngFor = "let equipo of equipos" >
+    <td>{{ equipo.id }}</td>
+    <td>{{ equipo.nombre }}</td>
+    <td>{{ equipo.puntos }}</td>
+  </tr>
+</table>
