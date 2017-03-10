@@ -19,12 +19,12 @@ export class AppComponent implements OnInit {
    this.socket = io('http://localhost:3000');
    this.socket.on('message',function(msg){
      var msj = msg;
-   document.getElementById('mensaje').innerHTML = msj;
+     document.getElementById('mensaje').innerHTML = msj;
    });
    this.ranking.getEquipos().subscribe(response=>{
      this.equipos = response
    });
-    console.log(this.ranking.getEquipos().subscribe(response=>this.equipos = response));
+    //console.log(this.ranking.getEquipos().subscribe(response=>this.equipos = response));
  }
 
 

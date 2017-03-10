@@ -28,7 +28,13 @@ app.use('/api',api);
 
 
 io.sockets.on('connection',function (socket) {
-    socket.emit('message',"Equipo en primer lugar");
+
+setTimeout(function() {
+  socket.emit('message', "Equipo en primer lugar es:");
+},5000);
+
+
+
 });
 
 
