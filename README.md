@@ -9,7 +9,7 @@ Liga Santander , posiciones a la fecha.
 Ejecuta `ng build` para construir el proyecto. Todo se deposita en la carpeta DIST
 
 ## 2 -Ejecuta el Servidor
-Ejecuta `npm start` para iniciar el servidor y otros scripts. El servidor correra en. http://localhost/3000
+Ejecuta `npm start` para iniciar el servidor y otros scripts. El servidor correra en: http://localhost:3000
 
 
 ## Further help
