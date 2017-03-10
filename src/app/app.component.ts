@@ -12,15 +12,15 @@ export class AppComponent implements OnInit {
   title = 'Liga de Futbol Santander';
   socket = null;
 
- constructor (private ranking:RankingServiceService){
-
-
- }
+ constructor (private ranking:RankingServiceService){}
 
  ngOnInit(){
 
    this.socket = io('http://localhost:3000');
-   this.socket.emit('message','Equipo en primer lugar');
+   this.socket.on('message',function(msg){
+     var msj = msg;
+   document.getElementById('mensaje').innerHTML = msj;
+   });
    this.ranking.getEquipos().subscribe(response=>{
      this.equipos = response
    });
