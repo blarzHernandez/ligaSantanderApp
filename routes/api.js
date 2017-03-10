@@ -2,8 +2,8 @@
 var express = require('express');
 var router = express.Router();
 
-//Definmos ruta
-
+//Definmos rutas
+//var teamPosition = [];
 router.get('/ranking',function (req, res) {
   //Team positions
   teamPosition = [{id:1,nombre:'Barca',puntos:60},
@@ -23,5 +23,7 @@ router.get('/ranking',function (req, res) {
 
   res.status(200).json(teamPosition);
 });
+
+
 //Exportamos modulo
 module.exports = router;
