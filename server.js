@@ -6,6 +6,7 @@ var server = require('http').Server(app);
 var io = require('socket.io')(server);
 var api = require('./routes/api');
 var index = require('./routes/index');
+var ranking = require('./routes/ranking');
 
 
 /*app.set('views',path.join(__dirname,'dist'));
@@ -30,7 +31,11 @@ app.use('/api',api);
 io.sockets.on('connection',function (socket) {
 
 setTimeout(function() {
-  socket.emit('message', "Equipo en primer lugar es:");
+
+  socket.emit('message', "Equipo en primer lugar es el equipo :" + ranking.getMax().nombre);
+  setTimeout(function () {
+      socket.emit('message', "Equipo en Ultimo lugar es: " + ranking.getMin().nombre);
+  },5000);
 },5000);
 
 
